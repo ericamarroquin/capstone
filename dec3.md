@@ -7,3 +7,8 @@
 - IM VERY CONFUSED
 
 - this was in fact not helpful and now im more confused
+
+- now im looking up using charts.js in react which feels more palpable
+
+- shes following [this](https://blog.logrocket.com/using-chart-js-react/)
+- - omg if you type `react.new` in a new browser tab it takes you to a react playground??? 
