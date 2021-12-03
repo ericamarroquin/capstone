@@ -1,0 +1,3 @@
+-desperately trying to figure out how to connect React and C#
+-im grasping at straws here
+-bridge.NET not common, on to the next one
