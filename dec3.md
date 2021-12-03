@@ -12,3 +12,7 @@
 
 - shes following [this](https://blog.logrocket.com/using-chart-js-react/)
 - - omg if you type `react.new` in a new browser tab it takes you to a react playground??? 
+
+- its broken and everything is meaningless
+
+![erica throwing computer](https://c.tenor.com/W-iD9IenPZwAAAAC/angry-panda.gif)
