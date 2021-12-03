@@ -16,3 +16,7 @@
 - its broken and everything is meaningless
 
 ![erica throwing computer](https://c.tenor.com/W-iD9IenPZwAAAAC/angry-panda.gif)
+
+- react-charts is throwing so many errors and im tired
+
+- it was a versioning error im gonna
