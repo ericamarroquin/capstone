@@ -1,3 +1,5 @@
+### Friday, 12/3
+
 - desperately trying to figure out how to connect React and C#
 - im grasping at straws here
 - bridge.NET not common, on to the next one
@@ -30,3 +32,7 @@
 - the long awaited crypto graph fetching from API is COMPLETE, using the same versioning as before
 
 <img src="https://github.com/ericamarroquin/capstone/blob/main/img/crypto-chart.png?raw=true" alt="long awaited crypto chart" width="1000"/>
+
+### Saturday, 12/4
+
+- Todays to-do: create a to-do list
