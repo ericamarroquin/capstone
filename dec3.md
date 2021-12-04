@@ -20,3 +20,12 @@
 - react-charts is throwing so many errors and im tired
 
 - it was a versioning error im gonna
+
+- chart.js@2.9.4 react-chartjs-2@2.11.2
+
+- here is the fruit of my labor: 
+
+<img src="https://github.com/ericamarroquin/capstone/blob/main/img/nice-charts.png?raw=true" alt="graph that took really long" width="1000"/>
+
+- the long awaited crypto graph fetching from API is COMPLETE, using the same versioning as before
+
