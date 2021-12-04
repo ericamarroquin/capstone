@@ -29,3 +29,4 @@
 
 - the long awaited crypto graph fetching from API is COMPLETE, using the same versioning as before
 
+<img src="https://github.com/ericamarroquin/capstone/blob/main/img/crypto-chart.png?raw=true" alt="long awaited crypto chart" width="1000"/>
