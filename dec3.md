@@ -1,4 +1,4 @@
-### Friday, 12/3
+## Friday, 12/3
 
 - desperately trying to figure out how to connect React and C#
 - im grasping at straws here
@@ -33,6 +33,14 @@
 
 <img src="https://github.com/ericamarroquin/capstone/blob/main/img/crypto-chart.png?raw=true" alt="long awaited crypto chart" width="1000"/>
 
-### Saturday, 12/4
+## Saturday, 12/4
 
 - Todays to-do: create a to-do list
+
+1. Decide language, frameworks, and packages
+2. Decide MVPs - what will success look like? What features can be added later?
+3. Make an overview of what the project will look like - actually make a component diagram :)
+
+## Sunday, 12/5
+
+- Okay I talked with my programmer friend and I feel generally more capable of doing this and it makes more sense
