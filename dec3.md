@@ -44,3 +44,15 @@
 ## Sunday, 12/5
 
 - Okay I talked with my programmer friend and I feel generally more capable of doing this and it makes more sense
+- I'm changing my project and am no longer going to do it about crypto, because I know nothing about it and have generally no interest in it, which will add an unnecessary layer of complexity
+
+These are the top things I want to do, my MVP:
+1. Build an API with C# - full CRUD
+- - Set up a local database with MySQL
+2. Build out a UI with React
+3. User authentication and authorization with [auth0](https://auth0.com/docs/api) - probably use their Web Application SDK
+
+If time permits:
+1. Allow user to view their data, a la Spotify Wrapped
+- - Assuming based on whatever the properties of the object I create is, ex: if its an app allowing a user to store information about the TV shows they've watched, they can see "Your top genre is: drama, you've spent x hours watching it"
+2. Make it look nice - I'm really focused on getting the functionality down 
