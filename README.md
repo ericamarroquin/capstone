@@ -22,10 +22,13 @@
   - ex: "Your top genre is: drama, you've spent x hours watching it"
 2. Create a enjoyable and visually appealing user experience
 
-What additional tools, frameworks, libraries, APIs, or other resources will these additional features require?
+### TECHNOLOGIES FOR EXTRA FEATURES
 
-- Python with the Pandas and Numpy libraries
+- Material UI or Semantic UI
 
-Is there anything else you'd like your instructor to know?
 
-- If this fails miserably and I realize I don't understand crypto, I'll be making a workout/meal plan iOS app to track macros and user inputted recipes
+### DATABASE SCHEMA
+
+See the database schema below. Shows and genre have a many-to-many relationship, where a show can have multiple genres and a genre can have multiple shows. Acting credit holds the IDs of actors and the shows that they are in. This is also many-to-many.
+
+![preliminary database schema](https://github.com/ericamarroquin/capstone/blob/main/img/prelim_show_database.png?raw=true)
