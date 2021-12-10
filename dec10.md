@@ -17,3 +17,5 @@
   - Show genre
 
 - 11:20am: This is proving to be more difficult than anticipated (i literally don't remember anything how am i going to get a job)
+
+![preliminary database design](https://github.com/ericamarroquin/capstone/blob/main/img/prelim_show_database.png?raw=true)
