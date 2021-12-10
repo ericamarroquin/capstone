@@ -7,3 +7,5 @@
 - - I know a will need two repositories, one for front, one for back
 
 - 9:30am: Rereading through the [Microsoft docs](https://docs.microsoft.com/en-us/aspnet/web-api/overview/older-versions/build-restful-apis-with-aspnet-web-api) for building an API
+
+- 10am: Adding the capstone proposal to README that I totally forgot about last week
