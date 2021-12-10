@@ -31,4 +31,10 @@
 
 See the database schema below. Shows and genre have a many-to-many relationship, where a show can have multiple genres and a genre can have multiple shows. Acting credit holds the IDs of actors and the shows that they are in. This is also many-to-many.
 
+#### Iteration One
+
 ![preliminary database schema](https://github.com/ericamarroquin/capstone/blob/main/img/prelim_show_database.png?raw=true)
+
+#### Iteration Two
+
+![second database schema]()
