@@ -37,4 +37,4 @@ See the database schema below. Shows and genre have a many-to-many relationship,
 
 #### Iteration Two
 
-![second database schema]()
+![second database schema](https://github.com/ericamarroquin/capstone/blob/main/img/second_show_database.png?raw=true)
