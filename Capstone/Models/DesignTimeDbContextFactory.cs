@@ -16,6 +16,8 @@ namespace Capstone.Models
 
       var builder = new DbContextOptionsBuilder<CapstoneContext>();
       builder.UseMySql(configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(configuration["ConnectionStrings:DefaultConnection"]));
+
+      return new CapstoneContext(builder.Options);
     }
   }
 }
