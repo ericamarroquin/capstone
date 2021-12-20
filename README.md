@@ -73,3 +73,11 @@ When querying a POST or PUT request, a JSON body is needed to add or edit inform
     "name": "string",
   }
 ```
+
+## License
+
+[MIT License](https://opensource.org/licenses/MIT)
+
+## Contact Information
+
+Erica Marroquin | [Email](mailto:ericamarroquin03@gmail.com) | [LinkedIn](https://www.linkedin.com/in/erica-marroquin/)
