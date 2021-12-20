@@ -31,5 +31,16 @@ namespace Capstone.Controllers
 
       return CreatedAtAction("Post", new { id = show.ShowId }, show);
     }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<Show>> GetShow(int id)
+    {
+      var show = await _db.Shows.FindAsync(id);
+      if (show == null)
+      {
+        return NotFound();
+      }
+      return show;
+    }
   }
 }
