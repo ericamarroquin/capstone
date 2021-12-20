@@ -72,6 +72,21 @@ namespace Capstone.Controllers
       return NoContent(); // returns passing code, no content meaning no additional info was added
     }
 
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteShow(int id)
+    {
+      var show = await _db.Shows.FindAsync(id);
+      if (show == null)
+      {
+        return NotFound();
+      }
+
+      _db.Shows.Remove(show);
+      await _db.SaveChangesAsync();
+
+      return NoContent();
+    }
+
     private bool ShowExists(int id)
     {
       return _db.Shows.Any(e => e.ShowId == id);
