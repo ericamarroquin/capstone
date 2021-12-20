@@ -1,33 +1,33 @@
 # Name TBD
 
-### PURPOSE
+## PURPOSE
 
 "Name TBD" is an application that allows a user to track the TV shows they are watching. The user will be able to enter the show name, genre, amount of episodes, and actors in the show. Users will then be able to determine what their favorite genres are and what actors they enjoy watching. 
 
-### MVP
+## MVP
 
 1. Create "Name TBD" API containing information about a users favorite shows using C# with full CRUD endpoints
 2. A React front end allowing the user to browse through show entries and update them as more shows are watched
 3. User authentication and authorization using auth0
 
-### TECHNOLOGIES USED FOR MVP
+## TECHNOLOGIES USED FOR MVP
 
 - React.jS
 - C#/.NET5
 - MySQL
 
-### EXTRA FEATURES
+## EXTRA FEATURES
 
 1. Allow user to view their data, a la Spotify Wrapped
   - ex: "Your top genre is: drama, you've spent x hours watching it"
 2. Create a enjoyable and visually appealing user experience
 
-### TECHNOLOGIES FOR EXTRA FEATURES
+## TECHNOLOGIES FOR EXTRA FEATURES
 
 - Material UI or Semantic UI
 
 
-### DATABASE SCHEMA
+## DATABASE SCHEMA
 
 See the database schema below. Shows and genre have a many-to-many relationship, where a show can have multiple genres and a genre can have multiple shows. Acting credit holds the IDs of actors and the shows that they are in. This is also many-to-many.
 
@@ -38,3 +38,38 @@ See the database schema below. Shows and genre have a many-to-many relationship,
 #### Iteration Two
 
 ![second database schema](https://github.com/ericamarroquin/capstone/blob/main/img/second_show_database.png?raw=true)
+
+## API ENDPOINTS
+
+Base URL: `http://localhost:5000`
+
+### HTTP Requests for Shows
+
+```
+GET /api/shows
+POST /api/shows
+PUT /api/shows
+GET /api/shows/{id}
+DELETE /api/shows/{id}
+```
+
+### Example Query
+
+```
+http://localhost:5000/api/shows/2
+```
+
+### Path Parameters
+|  Parameter   | Type   | Required | Description                     |
+|  ----------- | ------ | -------- | ------------------------------- |
+| name         | string | true     | Return matches by name          |
+
+### JSON Body for POST and PUT Requests
+When querying a POST or PUT request, a JSON body is needed to add or edit information in the database, respectively. Use the following JSON body to do so.
+
+```json
+  {
+    "showId": {id},
+    "name": "string",
+  }
+```
