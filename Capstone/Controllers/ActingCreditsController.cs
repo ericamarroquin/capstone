@@ -43,5 +43,53 @@ namespace Capstone.Controllers
       }
       return credit;
     }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Put(int id, ActingCredit credit)
+    {
+      if (id != credit.ActingCreditId)
+      {
+        return BadRequest();
+      }
+
+      _db.Entry(credit).State = EntityState.Modified;
+
+      try
+      {
+        await _db.SaveChangesAsync();
+      }
+      catch (DbUpdateConcurrencyException)
+      {
+        if (!ActingCreditExists(id))
+        {
+          return NotFound();
+        }
+        else
+        {
+          throw;
+        }
+      }
+      return NoContent();
+    }
+    
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteActingCredit(int id)
+    {
+      var credit = await _db.ActingCredit.FindAsync(id);
+      if (credit == null)
+      {
+        return NotFound();
+      }
+
+      _db.ActingCredit.Remove(credit);
+      await _db.SaveChangesAsync();
+
+      return NoContent();
+    }
+
+    private bool ActingCreditExists(int id)
+    {
+      return _db.ActingCredit.Any(e => e.ActingCreditId == id);
+    }
   }
 }
