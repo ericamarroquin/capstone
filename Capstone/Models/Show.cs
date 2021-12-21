@@ -6,11 +6,13 @@ namespace Capstone.Models
   {
     public Show()
     {
-      this.JoinEntities = new HashSet<GenreShow>();
+      this.JoinGenreShow = new HashSet<GenreShow>();
+      this.JoinActingCredit = new HashSet<ActingCredit>();
     }
     public int ShowId { get; set; }
     public string Name { get; set; }
 
-    public virtual ICollection<GenreShow> JoinEntities { get; }
+    public virtual ICollection<GenreShow> JoinGenreShow { get; }
+    public virtual ICollection<ActingCredit> JoinActingCredit { get; }
   }
 }

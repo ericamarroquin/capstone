@@ -6,11 +6,11 @@ namespace Capstone.Models
   {
     public Genre()
     {
-      this.JoinEntities = new HashSet<GenreShow>();
+      this.JoinGenreShow = new HashSet<GenreShow>();
     }
 
     public int GenreId { get; set; }
     public string Name { get; set; }
-    public virtual ICollection<GenreShow> JoinEntities { get; set; }
+    public virtual ICollection<GenreShow> JoinGenreShow { get; set; }
   }
 }
