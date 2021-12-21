@@ -15,6 +15,7 @@
 - React.jS
 - C#/.NET5
 - MySQL
+- auth0
 
 ## EXTRA FEATURES
 
@@ -48,28 +49,90 @@ Base URL: `http://localhost:5000`
 ```
 GET /api/shows
 POST /api/shows
-PUT /api/shows
+PUT /api/shows/{id}
 GET /api/shows/{id}
 DELETE /api/shows/{id}
 ```
 
-### Example Query
+#### Example Query
 
 ```
 http://localhost:5000/api/shows/2
 ```
 
-### Path Parameters
+#### Path Parameters
 |  Parameter   | Type   | Required | Description                     |
 |  ----------- | ------ | -------- | ------------------------------- |
 | name         | string | true     | Return matches by name          |
 
-### JSON Body for POST and PUT Requests
+#### JSON Body for POST and PUT Requests
 When querying a POST or PUT request, a JSON body is needed to add or edit information in the database, respectively. Use the following JSON body to do so.
 
 ```json
   {
     "showId": {id},
+    "name": "string",
+  }
+```
+
+### HTTP Requests for Actors
+
+```
+GET /api/actors
+POST /api/actors
+PUT /api/actors/{id}
+GET /api/actors/{id}
+DELETE /api/actors/{id}
+```
+
+#### Example Query
+
+```
+http://localhost:5000/api/actors/1
+```
+
+#### Path Parameters
+|  Parameter   | Type   | Required | Description                     |
+|  ----------- | ------ | -------- | ------------------------------- |
+| name         | string | true     | Return matches by name          |
+
+#### JSON Body for POST and PUT Requests
+When querying a POST or PUT request, a JSON body is needed to add or edit information in the database, respectively. Use the following JSON body to do so.
+
+```json
+  {
+    "actorId": {id},
+    "name": "string",
+  }
+```
+
+### HTTP Requests for Genres
+
+```
+GET /api/genres
+POST /api/genres
+PUT /api/genres/{id}
+GET /api/genres/{id}
+DELETE /api/genres/{id}
+```
+
+#### Example Query
+
+```
+http://localhost:5000/api/genres/3
+```
+
+#### Path Parameters
+|  Parameter   | Type   | Required | Description                     |
+|  ----------- | ------ | -------- | ------------------------------- |
+| name         | string | true     | Return matches by name          |
+
+#### JSON Body for POST and PUT Requests
+When querying a POST or PUT request, a JSON body is needed to add or edit information in the database, respectively. Use the following JSON body to do so.
+
+```json
+  {
+    "genreId": {id},
     "name": "string",
   }
 ```
