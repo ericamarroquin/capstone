@@ -20,7 +20,7 @@ namespace Capstone.Controllers
 
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Actor>>> Get()
-    {
+    { 
       return await _db.Actors.ToListAsync();
     }
 
