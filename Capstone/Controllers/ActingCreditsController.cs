@@ -24,7 +24,7 @@ namespace Capstone.Controllers
       return await _db.ActingCredit.ToListAsync();
     }
 
-    public async Task<ActionResult<Show>> AddActingCredit(ActingCredit newActingCredit)
+    public async Task<ActionResult<Show>> AddActingCredit(AddActingCreditDto newActingCredit)
     {
       Show show = await _db.Shows
         .Include(show => show.JoinActingCredit)
@@ -36,8 +36,24 @@ namespace Capstone.Controllers
         return NotFound();
       }
 
-      Actor actor = 
+      Actor actor = await _db.Actors
+        .FirstOrDefaultAsync(actor => actor.ActorId == newActingCredit.ActorId);
 
+      if (actor == null)
+      {
+        return NotFound();
+      }
+
+      ActingCredit actingCredit = new ActingCredit
+      {
+        Actor = actor,
+        Show = show
+      };
+
+      _db.ActingCredit.Add(actingCredit);
+      await _db.SaveChangesAsync();
+
+      return CreatedAtAction(nameof(GetActingCredit), new { id = actingCredit.ActingCreditId }, actingCredit);
     }
 
     // [HttpPost]
@@ -49,16 +65,16 @@ namespace Capstone.Controllers
     //   return CreatedAtAction(nameof(GetActingCredit), new { id = actingcredit.ActingCreditId }, actingcredit);
     // }
 
-    // [HttpGet("{id}")]
-    // public async Task<ActionResult<ActingCredit>> GetActingCredit(int id)
-    // {
-    //   var credit = await _db.ActingCredit.FindAsync(id);
-    //   if (credit == null)
-    //   {
-    //     return NotFound();
-    //   }
-    //   return credit;
-    // }
+    [HttpGet("{id}")]
+    public async Task<ActionResult<ActingCredit>> GetActingCredit(int id)
+    {
+      var credit = await _db.ActingCredit.FindAsync(id);
+      if (credit == null)
+      {
+        return NotFound();
+      }
+      return credit;
+    }
 
     // [HttpPut("{id}")]
     // public async Task<IActionResult> Put(int id, ActingCredit credit)
