@@ -57,14 +57,14 @@ namespace Capstone.Controllers
     //   return CreatedAtAction(nameof(GetActingCredit), new { id = actingCredit.ActingCreditId }, actingCredit);
     // }
 
-    // [HttpPost]
-    // public async Task<ActionResult<ActingCredit>> Post(ActingCredit actingcredit)
-    // {
-    //   _db.ActingCredit.Add(actingcredit);
-    //   await _db.SaveChangesAsync();
+    [HttpPost]
+    public async Task<ActionResult<ActingCredit>> Post(ActingCredit actingcredit)
+    {
+      _db.ActingCredit.Add(actingcredit);
+      await _db.SaveChangesAsync();
 
-    //   return CreatedAtAction(nameof(GetActingCredit), new { id = actingcredit.ActingCreditId }, actingcredit);
-    // }
+      return CreatedAtAction(nameof(GetActingCredit), new { id = actingcredit.ActingCreditId }, actingcredit);
+    }
 
     [HttpGet("{id}")]
     public async Task<ActionResult<ActingCredit>> GetActingCredit(int id)
@@ -77,52 +77,52 @@ namespace Capstone.Controllers
       return credit;
     }
 
-    // [HttpPut("{id}")]
-    // public async Task<IActionResult> Put(int id, ActingCredit credit)
-    // {
-    //   if (id != credit.ActingCreditId)
-    //   {
-    //     return BadRequest();
-    //   }
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Put(int id, ActingCredit credit)
+    {
+      if (id != credit.ActingCreditId)
+      {
+        return BadRequest();
+      }
 
-    //   _db.Entry(credit).State = EntityState.Modified;
+      _db.Entry(credit).State = EntityState.Modified;
 
-    //   try
-    //   {
-    //     await _db.SaveChangesAsync();
-    //   }
-    //   catch (DbUpdateConcurrencyException)
-    //   {
-    //     if (!ActingCreditExists(id))
-    //     {
-    //       return NotFound();
-    //     }
-    //     else
-    //     {
-    //       throw;
-    //     }
-    //   }
-    //   return NoContent();
-    // }
+      try
+      {
+        await _db.SaveChangesAsync();
+      }
+      catch (DbUpdateConcurrencyException)
+      {
+        if (!ActingCreditExists(id))
+        {
+          return NotFound();
+        }
+        else
+        {
+          throw;
+        }
+      }
+      return NoContent();
+    }
     
-    // [HttpDelete("{id}")]
-    // public async Task<IActionResult> DeleteActingCredit(int id)
-    // {
-    //   var credit = await _db.ActingCredit.FindAsync(id);
-    //   if (credit == null)
-    //   {
-    //     return NotFound();
-    //   }
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteActingCredit(int id)
+    {
+      var credit = await _db.ActingCredit.FindAsync(id);
+      if (credit == null)
+      {
+        return NotFound();
+      }
 
-    //   _db.ActingCredit.Remove(credit);
-    //   await _db.SaveChangesAsync();
+      _db.ActingCredit.Remove(credit);
+      await _db.SaveChangesAsync();
 
-    //   return NoContent();
-    // }
+      return NoContent();
+    }
 
-    // private bool ActingCreditExists(int id)
-    // {
-    //   return _db.ActingCredit.Any(e => e.ActingCreditId == id);
-    // }
+    private bool ActingCreditExists(int id)
+    {
+      return _db.ActingCredit.Any(e => e.ActingCreditId == id);
+    }
   }
 }

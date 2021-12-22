@@ -9,9 +9,9 @@ namespace Capstone.Models
     public virtual Show Show { get; set; }
   }
 
-  public class AddActingCreditDto
-  {
-    public int ActorId { get; set; }
-    public int ShowId { get; set; }
-  }
+  // public class AddActingCreditDto
+  // {
+  //   public int ActorId { get; set; }
+  //   public int ShowId { get; set; }
+  // }
 }
