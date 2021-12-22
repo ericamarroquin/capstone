@@ -26,12 +26,14 @@ namespace Capstone.Controllers
     }
 
     [HttpPost]
-    public async Task<ActionResult<GenreShow>> Post(GenreShow showgenre)
+    // when a show is given a genre, the genreId and showId are needed
+    // this will be handled in the show controller
+    public async Task<ActionResult<GenreShow>> Post(GenreShow showgenre, int showId, int genreId)
     {
       _db.GenreShow.Add(showgenre);
       await _db.SaveChangesAsync();
 
-      return CreatedAtAction(nameof(GetGenreShow), new { id = showgenre.GenreShowId }, showgenre);
+      return CreatedAtAction(nameof(GetGenreShow), new { id = showgenre.GenreShowId }, showgenre); // creating URL
     }
 
     [HttpGet("{id}")]
