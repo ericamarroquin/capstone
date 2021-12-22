@@ -19,7 +19,7 @@ namespace Capstone.Models
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-      modelBuilder.Entity<ActingCredit>().HasKey();
+      modelBuilder.Entity<ActingCredit>().HasKey(ac => new { ac.ActorId, ac.ShowId });
     }
   }
 }
