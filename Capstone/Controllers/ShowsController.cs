@@ -25,19 +25,19 @@ namespace Capstone.Controllers
     }
 
     [HttpPost]
-    public async Task<ActionResult<Show>> Post(Show show, int actorId, int genreId)
+    public async Task<ActionResult<Show>> Post(Show show)//, int actorId, int genreId)
     {
       _db.Shows.Add(show);
       await _db.SaveChangesAsync();
 
-      if (actorId != 0)
-      {
-        _db.ActingCredit.Add(new ActingCredit() { ActorId = actorId, ShowId = show.ShowId });
-      }
-      if (genreId != 0)
-      {
-        _db.GenreShow.Add(new GenreShow() { GenreId = genreId, ShowId = show.ShowId });
-      }
+      // if (actorId != 0)
+      // {
+      //   _db.ActingCredit.Add(new ActingCredit() { ActorId = actorId, ShowId = show.ShowId });
+      // }
+      // if (genreId != 0)
+      // {
+      //   _db.GenreShow.Add(new GenreShow() { GenreId = genreId, ShowId = show.ShowId });
+      // }
 
       await _db.SaveChangesAsync();
 
