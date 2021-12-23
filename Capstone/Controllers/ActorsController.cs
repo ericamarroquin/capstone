@@ -89,7 +89,7 @@ namespace Capstone.Controllers
       return NoContent();
     }
 
-    // PUT /shows/<show-id>/actors/<actor-id>
+    // PUT /actors/<actor-id>/shows/<show-id>
     // add show to actor
     // PUT is idempotent - actor can only be added to a show once
     [HttpPut("{actorId}/shows/{showId}")]
@@ -104,6 +104,19 @@ namespace Capstone.Controllers
       await _db.SaveChangesAsync();
 
       return NoContent();
+    }
+
+    // GET /<actor-id>/shows
+    // get shows credited to specific actor
+
+    [HttpGet("{actorId}/shows")]
+    public async Task<ActionResult<IEnumerable<Actor>>> GetActorShows(int actorId)
+    { 
+      return await _db.Actors
+        .Include(actor => actor.JoinActingCredit)
+        .ThenInclude(join => join.Show)
+        .ToListAsync();
+      // return await _db.Actors.ToListAsync();
     }
 
     private bool ActorExists(int id)
