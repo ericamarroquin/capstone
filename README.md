@@ -12,7 +12,7 @@
 
 ## TECHNOLOGIES USED FOR MVP
 
-- React.jS
+- React.js
 - C#/.NET5
 - MySQL
 - auth0
@@ -21,7 +21,7 @@
 
 1. Allow user to view their data, a la Spotify Wrapped
   - ex: "Your top genre is: drama, you've spent x hours watching it"
-2. Create a enjoyable and visually appealing user experience
+2. Create a enjoyable and visually appealing user experience using Material UI
 
 ## TECHNOLOGIES FOR EXTRA FEATURES
 
