@@ -1,12 +1,12 @@
-# Name TBD
+# EMDB
 
 ## PURPOSE
 
-"Name TBD" is an application that allows a user to track the TV shows they are watching. The user will be able to enter the show name, genre, amount of episodes, and actors in the show. Users will then be able to determine what their favorite genres are and what actors they enjoy watching. 
+"EMDB" is an application that allows a user to track the TV shows they are watching. The user will be able to enter the show name, genre, amount of episodes, and actors in the show. Users will then be presented with data on what their favorite genres are and what actors they enjoy watching. 
 
 ## MVP
 
-1. Create "Name TBD" API containing information about a users favorite shows using C# with full CRUD endpoints
+1. Create "EMDB" API containing information about a users favorite shows using C# with full CRUD endpoints
 2. A React front end allowing the user to browse through show entries and update them as more shows are watched
 3. User authentication and authorization using auth0
 
