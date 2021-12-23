@@ -89,6 +89,23 @@ namespace Capstone.Controllers
       return NoContent();
     }
 
+    // PUT /shows/<show-id>/actors/<actor-id>
+    // add show to actor
+    // PUT is idempotent - actor can only be added to a show once
+    [HttpPut("{actorId}/shows/{showId}")]
+    public async Task<IActionResult> AddActingCredit(int showId, int actorId)
+    {
+      if (showId == 0 || actorId == 0)
+      {
+        return BadRequest();
+      }
+
+      _db.ActingCredit.Add(new ActingCredit() { ShowId = showId, ActorId = actorId });
+      await _db.SaveChangesAsync();
+
+      return NoContent();
+    }
+
     private bool ActorExists(int id)
     {
       return _db.Actors.Any(e => e.ActorId == id);

@@ -17,9 +17,9 @@ namespace Capstone.Models
       optionsBuilder.UseLazyLoadingProxies(); // proxies are needed to use lazy loading
     }
 
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-      modelBuilder.Entity<ActingCredit>().HasKey(ac => new { ac.ActorId, ac.ShowId });
-    }
+    // protected override void OnModelCreating(ModelBuilder modelBuilder)
+    // {
+    //   modelBuilder.Entity<ActingCredit>().HasKey(ac => new { ac.ActorId, ac.ShowId });
+    // }
   }
 }
