@@ -24,25 +24,14 @@ namespace Capstone.Controllers
       return await _db.Shows.ToListAsync();
     }
 
-    // [HttpPost]
-    // public async Task<ActionResult<Show>> Post(Show show, int actorId, int genreId)
-    // {
-    //   _db.Shows.Add(show);
-    //   await _db.SaveChangesAsync();
+    [HttpPost]
+    public async Task<ActionResult<Show>> Post(Show show, int actorId, int genreId)
+    {
+      _db.Shows.Add(show);
+      await _db.SaveChangesAsync();
 
-    //   if (actorId != 0)
-    //   {
-    //     _db.ActingCredit.Add(new ActingCredit() { ActorId = actorId, ShowId = show.ShowId });
-    //   }
-    //   if (genreId != 0)
-    //   {
-    //     _db.GenreShow.Add(new GenreShow() { GenreId = genreId, ShowId = show.ShowId });
-    //   }
-
-    //   await _db.SaveChangesAsync();
-
-    //   return CreatedAtAction(nameof(GetShow), new { id = show.ShowId }, show);
-    // }
+      return CreatedAtAction(nameof(GetShow), new { id = show.ShowId }, show);
+    }
 
     [HttpGet("{id}")]
     public async Task<ActionResult<Show>> GetShow(int id)
