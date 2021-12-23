@@ -13,6 +13,6 @@ namespace Capstone.Models
     public string Name { get; set; }
 
     public virtual ICollection<GenreShow> JoinGenreShow { get; }
-    public virtual ICollection<ActingCredit> JoinActingCredit { get; }
+    public virtual ICollection<ActingCredit> JoinActingCredit { get; set; }
   }
 }

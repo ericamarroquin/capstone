@@ -109,18 +109,21 @@ namespace Capstone.Controllers
     // GET /<actor-id>/shows
     // get shows credited to specific actor
 
-    // [HttpGet("{actorId}/shows")]
-    // public async Task<ActionResult<IEnumerable<Actor>>> GetActorShows(int actorId)
-    // { 
-    //   i want:
-    //   a list of all shows
-    //   in which their id is in ActingCredit
-    //   that match with the actor id
-    //   match those show id
+    [HttpGet("{actorId}/shows")]
+    public async Task<ActionResult<IEnumerable<ActingCredit>>> GetActorShows(int actorId)
+    { 
+      // i want:
+      // a list of all shows
+      // in which their id is in ActingCredit
+      // that match with the actor id
+      // match those show id
 
-    //   return await _db.Actors.ToListAsync();
+      // return await _db.ActingCredit.ToListAsync();
 
-    // }
+      return await _db.ActingCredit
+        .Where(actor => actor.ActorId == actorId)
+        .ToListAsync();   
+    }
 
     private bool ActorExists(int id)
     {

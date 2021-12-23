@@ -12,14 +12,23 @@ namespace Capstone.Models
 
     public CapstoneContext(DbContextOptions options) : base(options) { }
 
+    // protected override void OnModelCreating(ModelBuilder modelBuilder)
+    // {
+    //   modelBuilder.Entity<ActingCredit>()
+    //     .HasKey(ac => new { ac.ActorId, ac.ShowId });
+    //   modelBuilder.Entity<ActingCredit>()
+    //     .HasOne(ac => ac.Show)
+    //     .WithMany(s => s.JoinActingCredit)
+    //     .HasForeignKey(ac => ac.ShowId);
+    //   modelBuilder.Entity<ActingCredit>()
+    //     .HasOne(ac => ac.Actor)
+    //     .WithMany(a => a.JoinActingCredit)
+    //     .HasForeignKey(ac => ac.ActorId);
+    // }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
       optionsBuilder.UseLazyLoadingProxies(); // proxies are needed to use lazy loading
     }
-
-    // protected override void OnModelCreating(ModelBuilder modelBuilder)
-    // {
-    //   modelBuilder.Entity<ActingCredit>().HasKey(ac => new { ac.ActorId, ac.ShowId });
-    // }
   }
 }
