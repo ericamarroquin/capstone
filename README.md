@@ -137,6 +137,35 @@ When querying a POST or PUT request, a JSON body is needed to add or edit inform
   }
 ```
 
+## Issues
+
+### January 2022
+
+After taking a break from this project, I decided to do more research on lazy loading properties and why I thought they were needed. Ending this project in December, I figured out that lazy loading was the cause of my database corruption issues - it was creating a continuous loop of database queries, which I now know as the *N + 1* problem.
+
+Lazy loading seems great, since it only loads related entries from the database when mentioned in the code, instead of loading everything first. In the code snippet of my join entity below, that's what I assumed was happening.
+
+```cs
+namespace Capstone.Models
+{
+  public class ActingCredit
+  {
+    public int ActingCreditId { get; set; }
+    public int ActorId { get; set; }
+    public int ShowId { get; set; }
+    public virtual Actor Actor { get; set; }
+    public virtual Show Show { get; set; }
+  }
+}
+```
+
+When I would perform a GET request for all actors that had acting credit, EF Core would fetch the actor, then go into acting credit to fetch the shows related to that actor. But, after loading the query for the acting credits, this added *another* query for the actor, starting the original request all over again. 
+
+Right from the Microsoft docs - `Because lazy loading makes it extremely easy to inadvertently trigger the N+1 problem, it is recommended to avoid it.` 
+
+Now I know! It for sure did create a hell of a headache, though, trying to figure out what was wrong.
+
+
 ## License
 
 [MIT License](https://opensource.org/licenses/MIT)

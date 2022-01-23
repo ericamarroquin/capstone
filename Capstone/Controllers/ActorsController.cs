@@ -25,7 +25,7 @@ namespace Capstone.Controllers
     }
 
     [HttpPost]
-    public async Task<ActionResult<Genre>> Post(Actor actor)
+    public async Task<ActionResult<Actor>> Post(Actor actor)
     {
       _db.Actors.Add(actor);
       await _db.SaveChangesAsync();
