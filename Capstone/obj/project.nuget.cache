@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OepDKBeWAUH0YfiuKl/p275A+qtE/M9K+7AV1tJc+HhOIR2IJ3Y0qV0BHhM48W1HqFeu5FaJgBjMdkhEtpDG7g==",
+  "dgSpecHash": "lVKTU8Lr0dLu/kJv8JcaMHqFShamgUJMtH4Zo6tPOFPPPFmIoxnydn5CO0rrLb50kNENmgnJZuWD2xn52Hn1uw==",
   "success": true,
   "projectFilePath": "/Users/ericamarroquin/Desktop/epicodus/Capstone.Solution/Capstone/Capstone.csproj",
   "expectedPackageFiles": [
@@ -112,7 +112,8 @@
     "/Users/ericamarroquin/.nuget/packages/system.threading.timer/4.3.0/system.threading.timer.4.3.0.nupkg.sha512",
     "/Users/ericamarroquin/.nuget/packages/system.xml.readerwriter/4.3.0/system.xml.readerwriter.4.3.0.nupkg.sha512",
     "/Users/ericamarroquin/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512",
-    "/Users/ericamarroquin/.nuget/packages/system.xml.xmldocument/4.3.0/system.xml.xmldocument.4.3.0.nupkg.sha512"
+    "/Users/ericamarroquin/.nuget/packages/system.xml.xmldocument/4.3.0/system.xml.xmldocument.4.3.0.nupkg.sha512",
+    "/Users/ericamarroquin/.nuget/packages/microsoft.netcore.app.host.osx-x64/5.0.13/microsoft.netcore.app.host.osx-x64.5.0.13.nupkg.sha512"
   ],
   "logs": []
 }
