@@ -10,7 +10,7 @@ namespace Capstone.Models
     }
     public DbSet<Actor> Actors { get; set; }
     public DbSet<Show> Shows { get; set; }
-    public DbSet<ActingCredit> ActingCredit { get; set; }
+    public DbSet<ActingCredit> ActingCredits { get; set; }
 
     public CapstoneContext(DbContextOptions options) : base(options) { }
   }

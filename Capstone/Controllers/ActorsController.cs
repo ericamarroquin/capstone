@@ -100,7 +100,7 @@ namespace Capstone.Controllers
         return BadRequest();
       }
 
-      _db.ActingCredit.Add(new ActingCredit() { ShowId = showId, ActorId = actorId });
+      _db.ActingCredits.Add(new ActingCredit() { ShowId = showId, ActorId = actorId });
       await _db.SaveChangesAsync();
 
       return NoContent();
@@ -120,7 +120,7 @@ namespace Capstone.Controllers
 
       // return await _db.ActingCredit.ToListAsync();
 
-      return await _db.ActingCredit
+      return await _db.ActingCredits
         .Where(actor => actor.ActorId == actorId)
         .ToListAsync();   
     }
